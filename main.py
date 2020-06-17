@@ -48,20 +48,20 @@ def main() -> None:
     print_welcome_message()
     course_list: List[Course] = []
     cmd: str = ""
-    while cmd is not "Q":
+    while cmd != "Q":
         cmd = input()
-        if cmd is "A":
+        if cmd == "A":
             course: Course = a_command()
             course_list.append(course)
-        elif cmd is "U":
+        elif cmd == "U":
             u_command(course_list)
-        elif cmd is "D":
+        elif cmd == "D":
             d_command(course_list)
-        elif cmd is "C":
+        elif cmd == "C":
             c_command(course_list)
-        elif cmd is "P":
+        elif cmd == "P":
             p_command(course_list)
-        elif cmd is "Q":
+        elif cmd == "Q":
             print("Thank-you, Good bye and Good Luck!")
         else:
             print("Invalid Command\n")
